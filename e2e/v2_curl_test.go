@@ -20,7 +20,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/appian/etcd/pkg/testutil"
 )
 
 func TestV2CurlNoTLS(t *testing.T)      { testCurlPutGet(t, &configNoTLS) }

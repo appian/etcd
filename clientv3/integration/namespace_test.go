@@ -19,11 +19,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/clientv3/namespace"
-	"github.com/coreos/etcd/integration"
-	"github.com/coreos/etcd/mvcc/mvccpb"
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/appian/etcd/clientv3"
+	"github.com/appian/etcd/clientv3/namespace"
+	"github.com/appian/etcd/integration"
+	"github.com/appian/etcd/mvcc/mvccpb"
+	"github.com/appian/etcd/pkg/testutil"
 )
 
 func TestNamespacePutGet(t *testing.T) {

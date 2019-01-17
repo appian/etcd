@@ -17,8 +17,8 @@ package snap
 import (
 	"io"
 
-	"github.com/coreos/etcd/pkg/ioutil"
-	"github.com/coreos/etcd/raft/raftpb"
+	"github.com/appian/etcd/pkg/ioutil"
+	"github.com/appian/etcd/raft/raftpb"
 )
 
 // Message is a struct that contains a raft Message and a ReadCloser. The type

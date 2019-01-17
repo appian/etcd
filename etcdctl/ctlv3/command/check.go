@@ -24,8 +24,8 @@ import (
 	"sync"
 	"time"
 
-	v3 "github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/pkg/report"
+	v3 "github.com/appian/etcd/clientv3"
+	"github.com/appian/etcd/pkg/report"
 
 	"github.com/spf13/cobra"
 	"golang.org/x/time/rate"

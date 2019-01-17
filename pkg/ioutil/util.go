@@ -18,7 +18,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/coreos/etcd/pkg/fileutil"
+	"github.com/appian/etcd/pkg/fileutil"
 )
 
 // WriteAndSyncFile behaves just like ioutil.WriteFile in the standard library,

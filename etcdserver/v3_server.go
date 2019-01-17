@@ -20,13 +20,13 @@ import (
 	"encoding/binary"
 	"time"
 
-	"github.com/coreos/etcd/auth"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/etcdserver/membership"
-	"github.com/coreos/etcd/lease"
-	"github.com/coreos/etcd/lease/leasehttp"
-	"github.com/coreos/etcd/mvcc"
-	"github.com/coreos/etcd/raft"
+	"github.com/appian/etcd/auth"
+	pb "github.com/appian/etcd/etcdserver/etcdserverpb"
+	"github.com/appian/etcd/etcdserver/membership"
+	"github.com/appian/etcd/lease"
+	"github.com/appian/etcd/lease/leasehttp"
+	"github.com/appian/etcd/mvcc"
+	"github.com/appian/etcd/raft"
 
 	"github.com/gogo/protobuf/proto"
 )

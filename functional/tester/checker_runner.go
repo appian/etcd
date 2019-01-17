@@ -14,7 +14,7 @@
 
 package tester
 
-import "github.com/coreos/etcd/functional/rpcpb"
+import "github.com/appian/etcd/functional/rpcpb"
 
 type runnerChecker struct {
 	ctype              rpcpb.Checker

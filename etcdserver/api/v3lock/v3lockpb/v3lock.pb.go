@@ -24,7 +24,7 @@ import (
 
 	_ "github.com/gogo/protobuf/gogoproto"
 
-	etcdserverpb "github.com/coreos/etcd/etcdserver/etcdserverpb"
+	etcdserverpb "github.com/appian/etcd/etcdserver/etcdserverpb"
 
 	context "golang.org/x/net/context"
 

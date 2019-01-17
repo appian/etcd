@@ -2,7 +2,7 @@
 
 etcd/client is the Go client library for etcd.
 
-[![GoDoc](https://godoc.org/github.com/coreos/etcd/client?status.png)](https://godoc.org/github.com/coreos/etcd/client)
+[![GoDoc](https://godoc.org/github.com/appian/etcd/client?status.png)](https://godoc.org/github.com/appian/etcd/client)
 
 etcd uses `cmd/vendor` directory to store external dependencies, which are
 to be compiled into etcd release binaries. `client` can be imported without
@@ -14,7 +14,7 @@ For more detail, please read [Go vendor design](https://golang.org/s/go15vendor)
 ## Install
 
 ```bash
-go get github.com/coreos/etcd/client
+go get github.com/appian/etcd/client
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ import (
 	"time"
 	"context"
 
-	"github.com/coreos/etcd/client"
+	"github.com/appian/etcd/client"
 )
 
 func main() {

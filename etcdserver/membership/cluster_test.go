@@ -21,11 +21,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/coreos/etcd/pkg/mock/mockstore"
-	"github.com/coreos/etcd/pkg/testutil"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/raft/raftpb"
-	"github.com/coreos/etcd/store"
+	"github.com/appian/etcd/pkg/mock/mockstore"
+	"github.com/appian/etcd/pkg/testutil"
+	"github.com/appian/etcd/pkg/types"
+	"github.com/appian/etcd/raft/raftpb"
+	"github.com/appian/etcd/store"
 )
 
 func TestClusterMember(t *testing.T) {

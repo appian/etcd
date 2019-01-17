@@ -21,9 +21,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/pkg/flags"
-	"github.com/coreos/etcd/pkg/testutil"
-	"github.com/coreos/etcd/version"
+	"github.com/appian/etcd/pkg/flags"
+	"github.com/appian/etcd/pkg/testutil"
+	"github.com/appian/etcd/version"
 )
 
 func TestCtlV3Version(t *testing.T) { testCtl(t, versionTest) }

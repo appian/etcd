@@ -24,7 +24,7 @@ import (
 	"sort"
 	"syscall"
 
-	"github.com/coreos/etcd/pkg/cpuutil"
+	"github.com/appian/etcd/pkg/cpuutil"
 )
 
 var errNoDefaultRoute = fmt.Errorf("could not find default route")

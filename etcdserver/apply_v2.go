@@ -19,10 +19,10 @@ import (
 	"path"
 	"time"
 
-	"github.com/coreos/etcd/etcdserver/api"
-	"github.com/coreos/etcd/etcdserver/membership"
-	"github.com/coreos/etcd/pkg/pbutil"
-	"github.com/coreos/etcd/store"
+	"github.com/appian/etcd/etcdserver/api"
+	"github.com/appian/etcd/etcdserver/membership"
+	"github.com/appian/etcd/pkg/pbutil"
+	"github.com/appian/etcd/store"
 	"github.com/coreos/go-semver/semver"
 )
 

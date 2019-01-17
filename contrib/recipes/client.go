@@ -18,8 +18,8 @@ import (
 	"context"
 	"errors"
 
-	v3 "github.com/coreos/etcd/clientv3"
-	spb "github.com/coreos/etcd/mvcc/mvccpb"
+	v3 "github.com/appian/etcd/clientv3"
+	spb "github.com/appian/etcd/mvcc/mvccpb"
 )
 
 var (
