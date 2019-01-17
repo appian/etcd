@@ -18,8 +18,8 @@ import (
 	goruntime "runtime"
 	"time"
 
-	"github.com/coreos/etcd/pkg/runtime"
-	"github.com/coreos/etcd/version"
+	"github.com/appian/etcd/pkg/runtime"
+	"github.com/appian/etcd/version"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

@@ -20,8 +20,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coreos/etcd/raft"
-	"github.com/coreos/etcd/raft/raftpb"
+	"github.com/appian/etcd/raft"
+	"github.com/appian/etcd/raft/raftpb"
 )
 
 type node struct {

@@ -19,11 +19,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/mvcc"
-	"github.com/coreos/etcd/pkg/types"
+	"github.com/appian/etcd/clientv3"
+	"github.com/appian/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/appian/etcd/etcdserver/etcdserverpb"
+	"github.com/appian/etcd/mvcc"
+	"github.com/appian/etcd/pkg/types"
 )
 
 // CheckInitialHashKV compares initial hash values with its peers

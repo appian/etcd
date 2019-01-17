@@ -19,8 +19,8 @@ import (
 	"math"
 	"sync"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
+	"github.com/appian/etcd/clientv3"
+	"github.com/appian/etcd/etcdserver/api/v3rpc/rpctypes"
 
 	"golang.org/x/time/rate"
 	"google.golang.org/grpc"

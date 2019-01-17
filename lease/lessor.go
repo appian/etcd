@@ -22,8 +22,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coreos/etcd/lease/leasepb"
-	"github.com/coreos/etcd/mvcc/backend"
+	"github.com/appian/etcd/lease/leasepb"
+	"github.com/appian/etcd/mvcc/backend"
 )
 
 // NoLease is a special LeaseID representing the absence of a lease.

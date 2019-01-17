@@ -18,8 +18,8 @@ import (
 	"context"
 	"sync/atomic"
 
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/pkg/testutil"
+	pb "github.com/appian/etcd/etcdserver/etcdserverpb"
+	"github.com/appian/etcd/pkg/testutil"
 )
 
 type fakeCompactable struct {

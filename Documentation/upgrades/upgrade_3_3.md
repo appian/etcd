@@ -8,7 +8,7 @@ Before [starting an upgrade](#upgrade-procedure), read through the rest of this 
 
 ### Upgrade checklists
 
-**NOTE:** When [migrating from v2 with no v3 data](https://github.com/coreos/etcd/issues/9480), etcd server v3.2+ panics when etcd restores from existing snapshots but no v3 `ETCD_DATA_DIR/member/snap/db` file. This happens when the server had migrated from v2 with no previous v3 data. This also prevents accidental v3 data loss (e.g. `db` file might have been moved). etcd requires that post v3 migration can only happen with v3 data. Do not upgrade to newer v3 versions until v3.0 server contains v3 data.
+**NOTE:** When [migrating from v2 with no v3 data](https://github.com/appian/etcd/issues/9480), etcd server v3.2+ panics when etcd restores from existing snapshots but no v3 `ETCD_DATA_DIR/member/snap/db` file. This happens when the server had migrated from v2 with no previous v3 data. This also prevents accidental v3 data loss (e.g. `db` file might have been moved). etcd requires that post v3 migration can only happen with v3 data. Do not upgrade to newer v3 versions until v3.0 server contains v3 data.
 
 Highlighted breaking changes in 3.3.
 
@@ -19,7 +19,7 @@ Highlighted breaking changes in 3.3.
 Before and after (e.g. [k8s.io/kubernetes/test/e2e_node/services/etcd.go](https://github.com/kubernetes/kubernetes/blob/release-1.8/test/e2e_node/services/etcd.go#L50-L55))
 
 ```diff
-import "github.com/coreos/etcd/etcdserver"
+import "github.com/appian/etcd/etcdserver"
 
 type EtcdServer struct {
 	*etcdserver.EtcdServer
@@ -66,7 +66,7 @@ WARNING: 2017/11/02 11:35:51 grpc: addrConn.resetTransport failed to create clie
 From v3.3, gRPC server logs are disabled by default.
 
 ```go
-import "github.com/coreos/etcd/embed"
+import "github.com/appian/etcd/embed"
 
 cfg := &embed.Config{Debug: false}
 cfg.SetupLogging()
@@ -76,7 +76,7 @@ Set `embed.Config.Debug` field to `true` to enable gRPC server logs.
 
 #### Change in `/health` endpoint response
 
-Previously, `[endpoint]:[client-port]/health` returned manually marshaled JSON value. 3.3 now defines [`etcdhttp.Health`](https://godoc.org/github.com/coreos/etcd/etcdserver/api/etcdhttp#Health) struct.
+Previously, `[endpoint]:[client-port]/health` returned manually marshaled JSON value. 3.3 now defines [`etcdhttp.Health`](https://godoc.org/github.com/appian/etcd/etcdserver/api/etcdhttp#Health) struct.
 
 Note that in v3.3.0-rc.0, v3.3.0-rc.1, and v3.3.0-rc.2, `etcdhttp.Health` has boolean type `"health"` and `"errors"` fields. For backward compatibilities, we reverted `"health"` field to `string` type and removed `"errors"` field. Further health information will be provided in separate APIs.
 
@@ -121,8 +121,8 @@ etcdctl put foo [LARGE VALUE...]
 Or configure `embed.Config.MaxRequestBytes` field:
 
 ```go
-import "github.com/coreos/etcd/embed"
-import "github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
+import "github.com/appian/etcd/embed"
+import "github.com/appian/etcd/etcdserver/api/v3rpc/rpctypes"
 
 // limit requests to 5 MiB
 cfg := embed.NewConfig()
@@ -143,7 +143,7 @@ etcd --max-request-bytes 1048576
 ```
 
 ```go
-import "github.com/coreos/etcd/clientv3"
+import "github.com/appian/etcd/clientv3"
 
 cli, _ := clientv3.New(clientv3.Config{
     Endpoints: []string{"127.0.0.1:2379"},
@@ -174,11 +174,11 @@ _, err = cli.Get(ctx, "foo", clientv3.WithPrefix())
 err.Error() == "rpc error: code = ResourceExhausted desc = grpc: received message larger than max (5240509 vs. 3145728)"
 ```
 
-**If not specified, client-side send limit defaults to 2 MiB (1.5 MiB + gRPC overhead bytes) and receive limit to `math.MaxInt32`**. Please see [clientv3 godoc](https://godoc.org/github.com/coreos/etcd/clientv3#Config) for more detail.
+**If not specified, client-side send limit defaults to 2 MiB (1.5 MiB + gRPC overhead bytes) and receive limit to `math.MaxInt32`**. Please see [clientv3 godoc](https://godoc.org/github.com/appian/etcd/clientv3#Config) for more detail.
 
 #### Change in raw gRPC client wrappers
 
-3.3 changes the function signatures of `clientv3` gRPC client wrapper. This change was needed to support [custom `grpc.CallOption` on message size limits](https://github.com/coreos/etcd/pull/9047).
+3.3 changes the function signatures of `clientv3` gRPC client wrapper. This change was needed to support [custom `grpc.CallOption` on message size limits](https://github.com/appian/etcd/pull/9047).
 
 Before and after
 
@@ -264,7 +264,7 @@ lease 2d8257079fa1bc0c already expired
 
 #### Change in `golang.org/x/net/context` imports
 
-`clientv3` has deprecated `golang.org/x/net/context`. If a project vendors `golang.org/x/net/context` in other code (e.g. etcd generated protocol buffer code) and imports `github.com/coreos/etcd/clientv3`, it requires Go 1.9+ to compile.
+`clientv3` has deprecated `golang.org/x/net/context`. If a project vendors `golang.org/x/net/context` in other code (e.g. etcd generated protocol buffer code) and imports `github.com/appian/etcd/clientv3`, it requires Go 1.9+ to compile.
 
 Before
 
@@ -291,14 +291,14 @@ cli.Put(context.Background(), "f", "v")
 Before
 
 ```go
-import "github.com/coreos/etcd/clientv3"
+import "github.com/appian/etcd/clientv3"
 clientv3.SetLogger(log.New(os.Stderr, "grpc: ", 0))
 ```
 
 After
 
 ```go
-import "github.com/coreos/etcd/clientv3"
+import "github.com/appian/etcd/clientv3"
 import "google.golang.org/grpc/grpclog"
 clientv3.SetLogger(grpclog.NewLoggerV2(os.Stderr, os.Stderr, os.Stderr))
 
@@ -307,7 +307,7 @@ clientv3.SetLogger(grpclog.NewLoggerV2(os.Stderr, os.Stderr, os.Stderr))
 
 ##### Deprecate `grpc.ErrClientConnTimeout`
 
-Previously, `grpc.ErrClientConnTimeout` error is returned on client dial time-outs. 3.3 instead returns `context.DeadlineExceeded` (see [#8504](https://github.com/coreos/etcd/issues/8504)).
+Previously, `grpc.ErrClientConnTimeout` error is returned on client dial time-outs. 3.3 instead returns `context.DeadlineExceeded` (see [#8504](https://github.com/appian/etcd/issues/8504)).
 
 Before
 

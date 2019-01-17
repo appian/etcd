@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/coreos/etcd/mvcc/mvccpb"
-	"github.com/coreos/etcd/pkg/adt"
+	"github.com/appian/etcd/mvcc/mvccpb"
+	"github.com/appian/etcd/pkg/adt"
 )
 
 var (

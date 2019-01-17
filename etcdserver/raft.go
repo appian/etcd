@@ -22,16 +22,16 @@ import (
 	"sync/atomic"
 	"time"
 
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/etcdserver/membership"
-	"github.com/coreos/etcd/pkg/contention"
-	"github.com/coreos/etcd/pkg/pbutil"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/raft"
-	"github.com/coreos/etcd/raft/raftpb"
-	"github.com/coreos/etcd/rafthttp"
-	"github.com/coreos/etcd/wal"
-	"github.com/coreos/etcd/wal/walpb"
+	pb "github.com/appian/etcd/etcdserver/etcdserverpb"
+	"github.com/appian/etcd/etcdserver/membership"
+	"github.com/appian/etcd/pkg/contention"
+	"github.com/appian/etcd/pkg/pbutil"
+	"github.com/appian/etcd/pkg/types"
+	"github.com/appian/etcd/raft"
+	"github.com/appian/etcd/raft/raftpb"
+	"github.com/appian/etcd/rafthttp"
+	"github.com/appian/etcd/wal"
+	"github.com/appian/etcd/wal/walpb"
 	"github.com/coreos/pkg/capnslog"
 )
 
@@ -63,7 +63,7 @@ var (
 )
 
 func init() {
-	raft.SetLogger(capnslog.NewPackageLogger("github.com/coreos/etcd", "raft"))
+	raft.SetLogger(capnslog.NewPackageLogger("github.com/appian/etcd", "raft"))
 	expvar.Publish("raft.status", expvar.Func(func() interface{} {
 		raftStatusMu.Lock()
 		defer raftStatusMu.Unlock()

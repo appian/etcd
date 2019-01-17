@@ -18,9 +18,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
-	"github.com/coreos/etcd/integration"
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/appian/etcd/etcdserver/api/v3rpc/rpctypes"
+	"github.com/appian/etcd/integration"
+	"github.com/appian/etcd/pkg/testutil"
 )
 
 func TestRoleError(t *testing.T) {

@@ -24,11 +24,11 @@ import (
 	"strings"
 	"time"
 
-	pioutil "github.com/coreos/etcd/pkg/ioutil"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/raft/raftpb"
-	"github.com/coreos/etcd/snap"
-	"github.com/coreos/etcd/version"
+	pioutil "github.com/appian/etcd/pkg/ioutil"
+	"github.com/appian/etcd/pkg/types"
+	"github.com/appian/etcd/raft/raftpb"
+	"github.com/appian/etcd/snap"
+	"github.com/appian/etcd/version"
 )
 
 const (

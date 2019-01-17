@@ -25,8 +25,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/pkg/expect"
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/appian/etcd/pkg/expect"
+	"github.com/appian/etcd/pkg/testutil"
 )
 
 func TestCtlV3Snapshot(t *testing.T) { testCtl(t, snapshotTest) }

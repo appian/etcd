@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/coreos/etcd/auth/authpb"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
+	"github.com/appian/etcd/auth/authpb"
+	pb "github.com/appian/etcd/etcdserver/etcdserverpb"
 
 	"google.golang.org/grpc"
 )

@@ -21,7 +21,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/coreos/etcd/pkg/transport"
+	"github.com/appian/etcd/pkg/transport"
 
 	"github.com/ghodss/yaml"
 )
