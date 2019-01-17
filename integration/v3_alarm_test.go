@@ -22,11 +22,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/mvcc"
-	"github.com/coreos/etcd/mvcc/backend"
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/appian/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/appian/etcd/etcdserver/etcdserverpb"
+	"github.com/appian/etcd/mvcc"
+	"github.com/appian/etcd/mvcc/backend"
+	"github.com/appian/etcd/pkg/testutil"
 )
 
 // TestV3StorageQuotaApply tests the V3 server respects quotas during apply

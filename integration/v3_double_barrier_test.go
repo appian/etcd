@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/clientv3/concurrency"
-	"github.com/coreos/etcd/contrib/recipes"
+	"github.com/appian/etcd/clientv3/concurrency"
+	"github.com/appian/etcd/contrib/recipes"
 )
 
 func TestDoubleBarrier(t *testing.T) {

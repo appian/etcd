@@ -19,8 +19,8 @@
 //	import (
 //		"context"
 //
-//		"github.com/coreos/etcd/embed"
-//		"github.com/coreos/etcd/etcdserver/api/v3client"
+//		"github.com/appian/etcd/embed"
+//		"github.com/appian/etcd/etcdserver/api/v3client"
 //	)
 //
 //	...

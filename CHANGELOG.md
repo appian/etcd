@@ -1,20 +1,20 @@
-## [v3.3.0](https://github.com/coreos/etcd/releases/tag/v3.3.0)
+## [v3.3.0](https://github.com/appian/etcd/releases/tag/v3.3.0)
 
-See [code changes](https://github.com/coreos/etcd/compare/v3.2.0...v3.3.0) and [v3.3 upgrade guide](https://github.com/coreos/etcd/blob/master/Documentation/upgrades/upgrade_3_3.md) for any breaking changes.
+See [code changes](https://github.com/appian/etcd/compare/v3.2.0...v3.3.0) and [v3.3 upgrade guide](https://github.com/appian/etcd/blob/master/Documentation/upgrades/upgrade_3_3.md) for any breaking changes.
 
 ### Improved
 
 - Use [`coreos/bbolt`](https://github.com/coreos/bbolt/releases) to replace [`boltdb/bolt`](https://github.com/boltdb/bolt#project-status).
-  - Fix [etcd database size grows until `mvcc: database space exceeded`](https://github.com/coreos/etcd/issues/8009).
-- [Reduce memory allocation](https://github.com/coreos/etcd/pull/8428) on [Range operations](https://github.com/coreos/etcd/pull/8475).
-- [Rate limit](https://github.com/coreos/etcd/pull/8099) and [randomize](https://github.com/coreos/etcd/pull/8101) lease revoke on restart or leader elections.
-  - Prevent [spikes in Raft proposal rate](https://github.com/coreos/etcd/issues/8096).
-- Support `clientv3` balancer failover under [network faults/partitions](https://github.com/coreos/etcd/issues/8711).
-- Better warning on [mismatched `--initial-cluster`](https://github.com/coreos/etcd/pull/8083) flag.
+  - Fix [etcd database size grows until `mvcc: database space exceeded`](https://github.com/appian/etcd/issues/8009).
+- [Reduce memory allocation](https://github.com/appian/etcd/pull/8428) on [Range operations](https://github.com/appian/etcd/pull/8475).
+- [Rate limit](https://github.com/appian/etcd/pull/8099) and [randomize](https://github.com/appian/etcd/pull/8101) lease revoke on restart or leader elections.
+  - Prevent [spikes in Raft proposal rate](https://github.com/appian/etcd/issues/8096).
+- Support `clientv3` balancer failover under [network faults/partitions](https://github.com/appian/etcd/issues/8711).
+- Better warning on [mismatched `--initial-cluster`](https://github.com/appian/etcd/pull/8083) flag.
 
 ### Changed(Breaking Changes)
 
-- Require [Go 1.9+](https://github.com/coreos/etcd/issues/6174).
+- Require [Go 1.9+](https://github.com/appian/etcd/issues/6174).
   - Compile with *Go 1.9.2*.
   - Deprecate [`golang.org/x/net/context`](https://github.com/coreos/etcd/pull/8511).
 - Require [`google.golang.org/grpc`](https://github.com/grpc/grpc-go/releases) [**`v1.7.4`**](https://github.com/grpc/grpc-go/releases/tag/v1.7.4) or [**`v1.7.5+`**](https://github.com/grpc/grpc-go/releases/tag/v1.7.5):

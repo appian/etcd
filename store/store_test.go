@@ -18,9 +18,9 @@ import (
 	"testing"
 	"time"
 
-	etcdErr "github.com/coreos/etcd/error"
-	"github.com/coreos/etcd/pkg/testutil"
-	"github.com/coreos/etcd/store"
+	etcdErr "github.com/appian/etcd/error"
+	"github.com/appian/etcd/pkg/testutil"
+	"github.com/appian/etcd/store"
 )
 
 type StoreCloser interface {

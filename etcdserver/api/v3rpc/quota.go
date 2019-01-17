@@ -17,10 +17,10 @@ package v3rpc
 import (
 	"context"
 
-	"github.com/coreos/etcd/etcdserver"
-	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/pkg/types"
+	"github.com/appian/etcd/etcdserver"
+	"github.com/appian/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/appian/etcd/etcdserver/etcdserverpb"
+	"github.com/appian/etcd/pkg/types"
 )
 
 type quotaKVServer struct {

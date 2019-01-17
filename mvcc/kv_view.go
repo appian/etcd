@@ -15,7 +15,7 @@
 package mvcc
 
 import (
-	"github.com/coreos/etcd/lease"
+	"github.com/appian/etcd/lease"
 )
 
 type readView struct{ kv KV }

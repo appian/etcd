@@ -24,9 +24,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/coreos/etcd/pkg/expect"
-	"github.com/coreos/etcd/pkg/fileutil"
-	"github.com/coreos/etcd/pkg/flags"
+	"github.com/appian/etcd/pkg/expect"
+	"github.com/appian/etcd/pkg/fileutil"
+	"github.com/appian/etcd/pkg/flags"
 )
 
 const noOutputLineCount = 2 // cov-enabled binaries emit PASS and coverage count lines

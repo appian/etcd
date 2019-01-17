@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/lease"
-	"github.com/coreos/etcd/mvcc/backend"
-	"github.com/coreos/etcd/mvcc/mvccpb"
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/appian/etcd/lease"
+	"github.com/appian/etcd/mvcc/backend"
+	"github.com/appian/etcd/mvcc/mvccpb"
+	"github.com/appian/etcd/pkg/testutil"
 
 	"github.com/prometheus/client_golang/prometheus"
 	dto "github.com/prometheus/client_model/go"

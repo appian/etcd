@@ -24,10 +24,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/etcdserver/api/v3rpc"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/mvcc/mvccpb"
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/appian/etcd/etcdserver/api/v3rpc"
+	pb "github.com/appian/etcd/etcdserver/etcdserverpb"
+	"github.com/appian/etcd/mvcc/mvccpb"
+	"github.com/appian/etcd/pkg/testutil"
 )
 
 // TestV3WatchFromCurrentRevision tests Watch APIs from current revision.

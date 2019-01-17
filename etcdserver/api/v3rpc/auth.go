@@ -17,8 +17,8 @@ package v3rpc
 import (
 	"context"
 
-	"github.com/coreos/etcd/etcdserver"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
+	"github.com/appian/etcd/etcdserver"
+	pb "github.com/appian/etcd/etcdserver/etcdserverpb"
 )
 
 type AuthServer struct {

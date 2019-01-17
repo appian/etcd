@@ -32,24 +32,24 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/client"
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/embed"
-	"github.com/coreos/etcd/etcdserver"
-	"github.com/coreos/etcd/etcdserver/api/etcdhttp"
-	"github.com/coreos/etcd/etcdserver/api/v2http"
-	"github.com/coreos/etcd/etcdserver/api/v3client"
-	"github.com/coreos/etcd/etcdserver/api/v3election"
-	epb "github.com/coreos/etcd/etcdserver/api/v3election/v3electionpb"
-	"github.com/coreos/etcd/etcdserver/api/v3lock"
-	lockpb "github.com/coreos/etcd/etcdserver/api/v3lock/v3lockpb"
-	"github.com/coreos/etcd/etcdserver/api/v3rpc"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/pkg/testutil"
-	"github.com/coreos/etcd/pkg/tlsutil"
-	"github.com/coreos/etcd/pkg/transport"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/rafthttp"
+	"github.com/appian/etcd/client"
+	"github.com/appian/etcd/clientv3"
+	"github.com/appian/etcd/embed"
+	"github.com/appian/etcd/etcdserver"
+	"github.com/appian/etcd/etcdserver/api/etcdhttp"
+	"github.com/appian/etcd/etcdserver/api/v2http"
+	"github.com/appian/etcd/etcdserver/api/v3client"
+	"github.com/appian/etcd/etcdserver/api/v3election"
+	epb "github.com/appian/etcd/etcdserver/api/v3election/v3electionpb"
+	"github.com/appian/etcd/etcdserver/api/v3lock"
+	lockpb "github.com/appian/etcd/etcdserver/api/v3lock/v3lockpb"
+	"github.com/appian/etcd/etcdserver/api/v3rpc"
+	pb "github.com/appian/etcd/etcdserver/etcdserverpb"
+	"github.com/appian/etcd/pkg/testutil"
+	"github.com/appian/etcd/pkg/tlsutil"
+	"github.com/appian/etcd/pkg/transport"
+	"github.com/appian/etcd/pkg/types"
+	"github.com/appian/etcd/rafthttp"
 
 	"github.com/coreos/pkg/capnslog"
 	"github.com/soheilhy/cmux"
@@ -91,7 +91,7 @@ var (
 		ClientCertAuth: true,
 	}
 
-	plog = capnslog.NewPackageLogger("github.com/coreos/etcd", "integration")
+	plog = capnslog.NewPackageLogger("github.com/appian/etcd", "integration")
 )
 
 type ClusterConfig struct {

@@ -19,8 +19,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/coreos/etcd/integration"
-	"github.com/coreos/etcd/pkg/testutil"
+	"github.com/appian/etcd/integration"
+	"github.com/appian/etcd/pkg/testutil"
 	"github.com/coreos/etcd/pkg/types"
 )
 
